@@ -13,7 +13,7 @@ namespace Champ_choice
 		{
 			InitializeComponent();
 
-			MainPage = new Champ_choice.MainPage();
+			MainPage = new NavigationPage (new Champ_choice.MainPage());
 		}
 
 		protected override void OnStart ()

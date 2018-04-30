@@ -132,4 +132,7 @@
       <Name>Champ_choice</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\HomeIcon.png" />
+  </ItemGroup>
 </Project>

@@ -4,8 +4,5 @@
              xmlns:local="clr-namespace:Champ_choice"
              x:Class="Champ_choice.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
+    <local:NavigationView />
 </ContentPage>
