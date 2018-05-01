@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Champ_choice.NavigationView">
+    <ContentView.Content>
+        <Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="44"/>
+                </Grid.RowDefinitions>
+
+                <ContentView x:Name="Placeholder" Grid.Row="0" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"/>
+                <BoxView BackgroundColor="#c6ffd3" Grid.Row="1"/>
+
+                <Grid Grid.Row="2" VerticalOptions="End" BackgroundColor="LightGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout Spacing="0" Grid.Column="0">
+                        <Button x:Name="btnHome" Image="HomeIcon.png" />
+                        <Label Text="Home" FontSize="10" HorizontalOptions="Center"/>
+                    </StackLayout>
+
+                    <StackLayout Spacing="0" Grid.Column="1">
+                        <Button x:Name="btnHome" Image="HomeIcon.png" />
+                        <Label Text="Home" FontSize="10" HorizontalOptions="Center"/>
+                    </StackLayout>
+
+                    <StackLayout Spacing="0" Grid.Column="2">
+                        <Button x:Name="btnHome" Image="HomeIcon.png" />
+                        <Label Text="Home" FontSize="10" HorizontalOptions="Center"/>
+                    </StackLayout>
+
+                    <StackLayout Spacing="0" Grid.Column="3">
+                        <Button x:Name="btnHome" Image="HomeIcon.png" />
+                        <Label Text="Home" FontSize="10" HorizontalOptions="Center"/>
+                    </StackLayout>
+
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentView.Content>
+</ContentView>
