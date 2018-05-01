@@ -2,7 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Champ_choice"
-             x:Class="Champ_choice.MainPage">
-
-    <local:NavigationView />
+             x:Class="Champ_choice.MainPage"
+             ControlTemplate="{DynamicResource MainPageTemplate}">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="MainPage"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

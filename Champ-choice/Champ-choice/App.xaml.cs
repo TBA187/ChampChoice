@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using Champ_choice.Pages;
 using Xamarin.Forms;
 
 namespace Champ_choice
@@ -13,8 +14,9 @@ namespace Champ_choice
 		{
 			InitializeComponent();
 
-			MainPage = new NavigationPage (new Champ_choice.MainPage());
-		}
+			MainPage = new NavigationPage (new MainPage());
+
+        }
 
 		protected override void OnStart ()
 		{
@@ -30,5 +32,10 @@ namespace Champ_choice
 		{
 			// Handle when your app resumes
 		}
-	}
+        private void OnHomeButtonPressed(object sender, EventArgs e)
+        {
+            App.Current.MainPage.Navigation.PushAsync(new HomePage());
+
+        }
+    }
 }
