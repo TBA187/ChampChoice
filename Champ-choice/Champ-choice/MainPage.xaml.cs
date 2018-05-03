@@ -13,7 +13,10 @@ namespace Champ_choice
 		public MainPage()
 		{
 			InitializeComponent();
-
+        }
+        private void OnHomeButtonPressed(object sender, EventArgs e)
+        {
+            App.Current.MainPage.Navigation.PushAsync(new HomePage());
         }
     }
 }

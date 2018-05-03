@@ -2,65 +2,13 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Champ_choice.App">
-	<Application.Resources>
-        <ResourceDictionary>
+    <Application.Resources>
+        <!--<ResourceDictionary>
 
-        <!--Header and content template for content pages-->
         <ControlTemplate x:Key="MainPageTemplate">
-            
-            <!--Bottom Navigation-->
-                <Grid>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="0.1*"/>
-                            <RowDefinition Height="44"/>
-                        </Grid.RowDefinitions>
 
-                        <!-- Begin Content -->
-                        <ScrollView Grid.Row="0">
-                            <ContentPresenter VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
-                        </ScrollView>
-                        <!-- End Content -->
-                      
 
-                    <Grid Grid.Row="2" VerticalOptions="End" BackgroundColor="LightGray">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <StackLayout Spacing="0" Grid.Column="0">
-                                <Image Source="HomeIcon.png">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer
-                                            Tapped="OnHomeButtonPressed"
-                                            NumberOfTapsRequired="1" />     
-                                    </Image.GestureRecognizers>
-                                </Image>
-                            </StackLayout>
-
-                        <StackLayout Spacing="0" Grid.Column="1">
-                            <!--<Button x:Name="btnHome" Image="HomeIcon.png" />-->
-                            <Label Text="Home" FontSize="10" HorizontalOptions="Center"/>
-                        </StackLayout>
-
-                        <StackLayout Spacing="0" Grid.Column="2">
-                            <!--<Button x:Name="btnHome" Image="HomeIcon.png" />-->
-                            <Label Text="Home" FontSize="10" HorizontalOptions="Center"/>
-                        </StackLayout>
-
-                        <StackLayout Spacing="0" Grid.Column="3">
-                            <!--<Button x:Name="btnHome" Image="HomeIcon.png" />-->
-                            <Label Text="Home" FontSize="10" HorizontalOptions="Center"/>
-                        </StackLayout>
-
-                    </Grid>
-                </Grid>
-            </Grid>
         </ControlTemplate>
-        </ResourceDictionary>
+        </ResourceDictionary>-->
     </Application.Resources>
 </Application>
