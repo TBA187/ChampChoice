@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Champ_choice.Pages.SettingsPage">
+    <ContentPage.Content>
+        <!--Bottom Navigation & Content-->
+            <Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="44"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Begin Content -->
+                    <ScrollView Grid.Row="0">
+                        <StackLayout>
+                            <Label Text="SettingsPage"
+                            VerticalOptions="CenterAndExpand" 
+                            HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </ScrollView>
+                    <!-- End Content -->
+
+
+                    <Grid Grid.Row="2" VerticalOptions="End" BackgroundColor="LightGray">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Spacing="0" Grid.Column="0">
+                            <!--<Image Source="ic_home_black_24dp.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer
+                                            Tapped="OnHomeButtonPressed"
+                                            NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>-->
+                            <Button x:Name="btnHome" Image="ic_home_black_24dp.png" BackgroundColor="Transparent"/>
+                        </StackLayout>
+
+                        <StackLayout Spacing="0" Grid.Column="1">
+                            <Button x:Name="btnFavourites" Image="ic_favorite_black_24dp.png" BackgroundColor="Transparent"/>
+                        </StackLayout>
+
+                        <StackLayout Spacing="0" Grid.Column="2">
+                            <Button x:Name="btnChampChoice" Image="ic_stars_black_24dp.png" BackgroundColor="Transparent"/>
+                        </StackLayout>
+
+                        <StackLayout Spacing="0" Grid.Column="3">
+                            <Button x:Name="btnSettings" Image="ic_settings_white_24dp.png" BackgroundColor="Transparent"/>
+                        </StackLayout>
+
+                    </Grid>
+                </Grid>
+            </Grid>
+    </ContentPage.Content>
+</ContentPage>

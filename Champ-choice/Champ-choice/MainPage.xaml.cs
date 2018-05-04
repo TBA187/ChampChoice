@@ -13,10 +13,17 @@ namespace Champ_choice
 		public MainPage()
 		{
 			InitializeComponent();
+
+            btnFavourites.Clicked += (s, e) => Navigation.PushAsync(new FavouritePage());
+            btnChampChoice.Clicked += (s, e) => Navigation.PushAsync(new ChampChoicePage());
+            btnSettings.Clicked += (s, e) => Navigation.PushAsync(new SettingsPage());
         }
-        private void OnHomeButtonPressed(object sender, EventArgs e)
+
+        
+
+        /* private void OnHomeButtonPressed(object sender, EventArgs e)
         {
             App.Current.MainPage.Navigation.PushAsync(new HomePage());
-        }
+        } */
     }
 }
