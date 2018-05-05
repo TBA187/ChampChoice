@@ -19,6 +19,12 @@ namespace Champ_choice.Pages
             btnHome.Clicked += (s, e) => Navigation.PushAsync(new MainPage());
             btnChampChoice.Clicked += (s, e) => Navigation.PushAsync(new ChampChoicePage());
             btnSettings.Clicked += (s, e) => Navigation.PushAsync(new SettingsPage());
+
+            NavigationPage.SetHasNavigationBar(this, false);
         }
-	}
+        public async void OnBackButtonPressed(object sender, EventArgs e)
+        {
+            await ((NavigationPage)Application.Current.MainPage).PopAsync();
+        }
+    }
 }

@@ -19,6 +19,8 @@ namespace Champ_choice.Pages
             btnHome.Clicked += (s, e) => Navigation.PushAsync(new MainPage());
             btnFavourites.Clicked += (s, e) => Navigation.PushAsync(new FavouritePage());
             btnSettings.Clicked += (s, e) => Navigation.PushAsync(new SettingsPage());
+
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 	}
 }

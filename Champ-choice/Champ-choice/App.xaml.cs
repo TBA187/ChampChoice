@@ -10,11 +10,14 @@ namespace Champ_choice
 {
 	public partial class App : Application
 	{
-		public App ()
+        //public static NavigationPage Navigation = null;
+        public App ()
 		{
 			InitializeComponent();
 
-			MainPage = new NavigationPage (new MainPage());
+            MainPage = new NavigationPage (new MainPage());
+
+            //Application.Current.MainPage = Navigation;
 
         }
 

@@ -17,9 +17,13 @@ namespace Champ_choice
             btnFavourites.Clicked += (s, e) => Navigation.PushAsync(new FavouritePage());
             btnChampChoice.Clicked += (s, e) => Navigation.PushAsync(new ChampChoicePage());
             btnSettings.Clicked += (s, e) => Navigation.PushAsync(new SettingsPage());
+
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
-        
+
+
+
 
         /* private void OnHomeButtonPressed(object sender, EventArgs e)
         {
