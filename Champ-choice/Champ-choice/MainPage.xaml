@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:Champ_choice"
              x:Class="Champ_choice.MainPage">
     <ContentPage.Content>
-        
+
         <!--Begin Header-->
         <Grid>
             <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ColumnSpacing="0">
@@ -20,7 +20,7 @@
                 <!--<Button BackgroundColor="Gray" Image="ic_keyboard_arrow_left_white_24dp.png" HeightRequest="56" WidthRequest="56" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1" />-->
                 <Image Source="CClogo.png" Aspect="AspectFit" BackgroundColor="Transparent" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2"/>
             </Grid>
-        <!--End Header-->
+            <!--End Header-->
 
             <!--Bottom Navigation & Content-->
             <Grid>
@@ -36,6 +36,15 @@
                         <Label Text="MainPage"
                             VerticalOptions="CenterAndExpand" 
                             HorizontalOptions="CenterAndExpand" />
+
+                        <ListView x:Name="TestListView">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextCell Text="{Binding Title}"></TextCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
                     </StackLayout>
                 </ScrollView>
                 <!-- End Content -->
