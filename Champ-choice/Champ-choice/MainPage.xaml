@@ -7,35 +7,49 @@
 
         <!--Begin Header-->
         <Grid>
-            <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ColumnSpacing="0">
+            <Grid VerticalOptions="FillAndExpand" 
+                  HorizontalOptions="FillAndExpand" 
+                  ColumnSpacing="0">
+                
                 <Grid.RowDefinitions>
                     <RowDefinition Height="80"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="44"/>
                 </Grid.RowDefinitions>
-                <BoxView BackgroundColor="#F55036" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6"/>
+                
+                <BoxView BackgroundColor="#F55036" 
+                         Grid.Column="0" 
+                         Grid.Row="0" 
+                         Grid.ColumnSpan="6"/>
+                
                 <!--<Image Source="ic_keyboard_arrow_left_white_24dp.png" Aspect="AspectFit" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnBackButtonPressed" />
                     </Image.GestureRecognizers>
                 </Image>-->
+                
                 <!--<Button BackgroundColor="Gray" Image="ic_keyboard_arrow_left_white_24dp.png" HeightRequest="56" WidthRequest="56" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1" />-->
-                <Image Source="CClogo.png" Aspect="AspectFit" BackgroundColor="Transparent" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2"/>
-            </Grid>
-            <!--End Header-->
-
-            <!--Bottom Navigation & Content-->
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="0.1*"/>
-                    <RowDefinition Height="44"/>
-                </Grid.RowDefinitions>
+                
+                <Image Source="CClogo.png" 
+                       Aspect="AspectFit" 
+                       BackgroundColor="Transparent" 
+                       Grid.Column="2" 
+                       Grid.Row="0" 
+                       Grid.ColumnSpan="2"/>
+                <!--End Header-->
 
                 <!-- Begin Content -->
-                <ScrollView Grid.Row="0">
+                <ScrollView Grid.Row="1" 
+                            Grid.ColumnSpan="6" 
+                            VerticalOptions="FillAndExpand" 
+                            HorizontalOptions="FillAndExpand" 
+                            BackgroundColor="LightBlue">
+                    
                     <StackLayout>
-                        <Label Text="MainPage"
-                            VerticalOptions="CenterAndExpand" 
-                            HorizontalOptions="CenterAndExpand" />
+                        
+                        <Label Text="MainPage" 
+                               VerticalOptions="CenterAndExpand" 
+                               HorizontalOptions="CenterAndExpand" />
 
                         <ListView x:Name="TestListView">
                             <ListView.ItemTemplate>
@@ -49,8 +63,12 @@
                 </ScrollView>
                 <!-- End Content -->
 
-
-                <Grid Grid.Row="2" VerticalOptions="End" BackgroundColor="LightGray">
+                <!--Bottom Navigation-->
+                <Grid Grid.Row="2" 
+                      VerticalOptions="End" 
+                      BackgroundColor="LightGray" 
+                      Grid.ColumnSpan="6">
+                    
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
@@ -66,7 +84,9 @@
                                             NumberOfTapsRequired="1" />
                             </Image.GestureRecognizers>
                         </Image>-->
-                        <Button x:Name="btnHome" Image="ic_home_white_24dp.png" BackgroundColor="Transparent"/>
+                        <Button x:Name="btnHome" 
+                                Image="ic_home_white_24dp.png" 
+                                BackgroundColor="Transparent"/>
                     </StackLayout>
 
                     <StackLayout Spacing="0" Grid.Column="1">
