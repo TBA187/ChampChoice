@@ -12,13 +12,13 @@ using Xamarin.Forms;
 
 namespace Champ_choice
 {
-	public partial class MainPage : ContentPage
+	public partial class LandingPage : ContentPage
 	{
         private const string Url = "http://xam150.azurewebsites.net/api/books/";
         private ObservableCollection<Item> _item;
         private string authorizationKey;
 
-        public MainPage()
+        public LandingPage()
 		{
 			InitializeComponent();
 

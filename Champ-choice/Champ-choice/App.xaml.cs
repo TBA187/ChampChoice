@@ -15,7 +15,7 @@ namespace Champ_choice
 		{
 			InitializeComponent();
 
-            MainPage = new NavigationPage (new MainPage());
+            MainPage = new NavigationPage (new LandingPage());
 
             //Application.Current.MainPage = Navigation;
 

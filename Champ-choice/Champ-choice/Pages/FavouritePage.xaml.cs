@@ -16,7 +16,7 @@ namespace Champ_choice.Pages
 		{
 			InitializeComponent ();
 
-            btnHome.Clicked += (s, e) => Navigation.PushAsync(new MainPage());
+            btnHome.Clicked += (s, e) => Navigation.PushAsync(new LandingPage());
             btnChampChoice.Clicked += (s, e) => Navigation.PushAsync(new ChampChoicePage());
             btnSettings.Clicked += (s, e) => Navigation.PushAsync(new SettingsPage());
 
