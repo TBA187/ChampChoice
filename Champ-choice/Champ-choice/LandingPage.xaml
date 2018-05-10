@@ -9,7 +9,8 @@
         <Grid>
             <Grid VerticalOptions="FillAndExpand" 
                   HorizontalOptions="FillAndExpand" 
-                  ColumnSpacing="0">
+                  ColumnSpacing="0"
+                  RowSpacing="0">
                 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="80"/>
@@ -42,8 +43,7 @@
                 <ScrollView Grid.Row="1" 
                             Grid.ColumnSpan="6" 
                             VerticalOptions="FillAndExpand" 
-                            HorizontalOptions="FillAndExpand" 
-                            BackgroundColor="LightBlue">
+                            HorizontalOptions="FillAndExpand">
                     
                     <StackLayout>
                         

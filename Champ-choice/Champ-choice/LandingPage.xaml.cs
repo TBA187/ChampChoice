@@ -22,9 +22,9 @@ namespace Champ_choice
 		{
 			InitializeComponent();
 
-            btnFavourites.Clicked += (s, e) => Navigation.PushAsync(new FavouritePage());
-            btnChampChoice.Clicked += (s, e) => Navigation.PushAsync(new ChampChoicePage());
-            btnSettings.Clicked += (s, e) => Navigation.PushAsync(new SettingsPage());
+            btnFavourites.Clicked += (s, e) => Navigation.PushModalAsync(new FavouritePage());
+            btnChampChoice.Clicked += (s, e) => Navigation.PushModalAsync(new ChampChoicePage());
+            btnSettings.Clicked += (s, e) => Navigation.PushModalAsync(new SettingsPage());
 
             NavigationPage.SetHasNavigationBar(this, false);
         }
