@@ -8,11 +8,13 @@
         <Grid>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="0.1*"/>
-                    <RowDefinition Height="44"/>
+                    <RowDefinition Height="*" /> <!--Height="*"-->
+                    <RowDefinition Height="0,1*" /> <!--Height="0.1*"-->
+                    <RowDefinition Height="44" /> <!--Height="44"-->
                 </Grid.RowDefinitions>
 
+                
+                
                 <!-- Begin Content -->
                 <ScrollView Grid.Row="0">
                     <StackLayout>
