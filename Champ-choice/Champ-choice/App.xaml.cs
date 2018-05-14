@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Plugin.Connectivity;
 using Champ_choice.Pages;
 using Xamarin.Forms;
 
