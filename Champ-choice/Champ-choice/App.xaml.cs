@@ -15,6 +15,7 @@ namespace Champ_choice
 			InitializeComponent();
 
             MainPage = new NavigationPage (new MainPage());
+ 
 
         }
 

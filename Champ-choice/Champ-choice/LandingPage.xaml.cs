@@ -80,13 +80,5 @@ namespace Champ_choice
             _item.Remove(item);
         }
 
-
-
-
-
-        /* private void OnHomeButtonPressed(object sender, EventArgs e)
-        {
-            App.Current.MainPage.Navigation.PushAsync(new HomePage());
-        } */
     }
 }

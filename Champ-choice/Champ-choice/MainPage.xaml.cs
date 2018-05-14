@@ -20,6 +20,10 @@ namespace Champ_choice
             BindingContext = new ImagesViewModel();
 
             NavigationPage.SetHasNavigationBar(this, false);
+
+            SetValue(NavigationPage.BarBackgroundColorProperty, Color.Black);
+
         }
+        
     }
 }

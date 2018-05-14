@@ -22,9 +22,5 @@ namespace Champ_choice.Pages
 
             NavigationPage.SetHasNavigationBar(this, false);
         }
-        public async void OnBackButtonPressed(object sender, EventArgs e)
-        {
-            await ((NavigationPage)Application.Current.MainPage).PopAsync();
-        }
     }
 }

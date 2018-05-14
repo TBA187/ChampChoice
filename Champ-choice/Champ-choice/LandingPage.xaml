@@ -44,12 +44,8 @@
                             Grid.ColumnSpan="6" 
                             VerticalOptions="FillAndExpand" 
                             HorizontalOptions="FillAndExpand">
-                    
-                    <StackLayout>
-                        
-                        <Label Text="MainPage" 
-                               VerticalOptions="CenterAndExpand" 
-                               HorizontalOptions="CenterAndExpand" />
+
+                    <StackLayout Spacing="10" HeightRequest="30">
 
                         <ListView x:Name="TestListView">
                             <ListView.ItemTemplate>
@@ -77,16 +73,7 @@
                     </Grid.ColumnDefinitions>
 
                     <StackLayout Spacing="0" Grid.Column="0">
-                        <!--<Image Source="ic_home_black_24dp.png">
-                            <Image.GestureRecognizers>
-                                <TapGestureRecognizer
-                                            Tapped="OnHomeButtonPressed"
-                                            NumberOfTapsRequired="1" />
-                            </Image.GestureRecognizers>
-                        </Image>-->
-                        <Button x:Name="btnHome" 
-                                Image="ic_home_white_24dp.png" 
-                                BackgroundColor="Transparent"/>
+                        <Button x:Name="btnHome" Image="ic_home_white_24dp.png" BackgroundColor="Transparent"/>
                     </StackLayout>
 
                     <StackLayout Spacing="0" Grid.Column="1">

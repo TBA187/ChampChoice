@@ -9,6 +9,7 @@
 
     <ContentPage.Content>
 
+        <!--Begin Header-->
         <Grid>
             <Grid VerticalOptions="FillAndExpand" 
                   HorizontalOptions="FillAndExpand" 
@@ -18,17 +19,13 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="80"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="44"/>
                 </Grid.RowDefinitions>
 
-                <!-- Begin Content -->
-                <ScrollView Grid.Row="0">
-                    <StackLayout>
-                        <Label Text="MainPage"
-                            VerticalOptions="CenterAndExpand" 
-                            HorizontalOptions="CenterAndExpand" />
-                    </StackLayout>
-                </ScrollView>
-                <!-- End Content -->
+                <BoxView BackgroundColor="#F55036" 
+                         Grid.Column="0" 
+                         Grid.Row="0" 
+                         Grid.ColumnSpan="6"/>
 
                 <Image Source="CClogo.png" 
                        Aspect="AspectFit" 

@@ -10,14 +10,8 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="80"/>
                     </Grid.RowDefinitions>
-                    <BoxView BackgroundColor="#F55036" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6"/>
-                    <Image Source="ic_keyboard_arrow_left_white_24dp.png" Aspect="AspectFit" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1">
-                        <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnBackButtonPressed" NumberOfTapsRequired="1" />
-                        </Image.GestureRecognizers>
-                    </Image>
-                    <!--<Button BackgroundColor="Gray" Image="ic_keyboard_arrow_left_white_24dp.png" HeightRequest="56" WidthRequest="56" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1" />-->
-                    <Image Source="CClogo.png" Aspect="AspectFit" BackgroundColor="Transparent" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2"/>
+                <BoxView BackgroundColor="#F55036" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6"/>
+                <Image Source="CClogo.png" Aspect="AspectFit" BackgroundColor="Transparent" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2"/>
                 </Grid>
                 <!--End Header-->
 
@@ -48,9 +42,8 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <StackLayout Spacing="0" Grid.Column="0">
+                    <StackLayout Spacing="0" Grid.Column="0" >
                         <Button x:Name="btnHome" Image="ic_home_black_24dp.png" BackgroundColor="Transparent"/>
-                        <Label Text="Home" FontSize="10" HorizontalOptions="Center"/>
                     </StackLayout>
 
                     <StackLayout Spacing="0" Grid.Column="1">
