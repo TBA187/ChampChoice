@@ -16,9 +16,9 @@ namespace Champ_choice.Pages
 		{
 			InitializeComponent ();
 
-            btnFavourites.Clicked += (s, e) => Navigation.PushAsync(new FavouritePage());
-            btnChampChoice.Clicked += (s, e) => Navigation.PushAsync(new ChampChoicePage());
-            btnHome.Clicked += (s, e) => Navigation.PushAsync(new MainPage());
+            btnFavourites.Clicked += (s, e) => Navigation.PushModalAsync(new FavouritePage());
+            btnChampChoice.Clicked += (s, e) => Navigation.PushModalAsync(new ChampChoicePage());
+            btnHome.Clicked += (s, e) => Navigation.PushModalAsync(new LandingPage());
 
             NavigationPage.SetHasNavigationBar(this, false);
         }
