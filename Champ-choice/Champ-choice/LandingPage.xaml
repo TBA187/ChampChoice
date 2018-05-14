@@ -50,7 +50,12 @@
                         <ListView x:Name="TestListView">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <TextCell Text="{Binding clubName}"></TextCell>
+                                    <ViewCell>
+                                        <Image Source="{Binding ImageResource.clubLogo}" WidthRequest="10" HeightRequest="10" Aspect="AspectFit" />
+                                        <StackLayout VerticalOptions="Center">
+                                            <Label Text="{Binding clubName}" TextColor="#1C5AD8" />
+                                        </StackLayout>
+                                    </ViewCell>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>

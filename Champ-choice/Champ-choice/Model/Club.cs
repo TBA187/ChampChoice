@@ -10,5 +10,11 @@ namespace Champ_choice.Model
         public string clubName { get; set; }
         public string clubAdress { get; set; }
         public string clubLogo { get; set; }
-    }
+        public string _selectedItem { get; set; }
+
+
 }
+
+
+    
+    }
