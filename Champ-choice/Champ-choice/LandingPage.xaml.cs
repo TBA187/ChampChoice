@@ -12,15 +12,17 @@ using Xamarin.Forms;
 
 namespace Champ_choice
 {
-	public partial class LandingPage : ContentPage
-	{
-        private const string Url = "http://xam150.azurewebsites.net/api/books/";
-        private ObservableCollection<Item> _item;
-        private string authorizationKey;
+    public partial class LandingPage : ContentPage
+    {
+        //private const string Url = "http://xam150.azurewebsites.net/api/books/";
+        //private const string Url = "http://localhost:1943/api/ClubApi/";
+        private const string Url = "http://www.alphajob.org/api/ClubApi/";
+        private ObservableCollection<Club> _club;
+        //private string authorizationKey;
 
         public LandingPage()
-		{
-			InitializeComponent();
+        {
+            InitializeComponent();
 
             btnFavourites.Clicked += (s, e) => Navigation.PushModalAsync(new FavouritePage());
             btnChampChoice.Clicked += (s, e) => Navigation.PushModalAsync(new ChampChoicePage());
@@ -28,57 +30,47 @@ namespace Champ_choice
 
             NavigationPage.SetHasNavigationBar(this, false);
         }
-
-
-        private async Task<HttpClient> GetClient()
-        {
-            HttpClient client = new HttpClient();
-            if (string.IsNullOrEmpty(authorizationKey))
-            {
-                authorizationKey = await client.GetStringAsync(Url + "login");
-                authorizationKey = JsonConvert.DeserializeObject<string>(authorizationKey);
-            }
-
-            client.DefaultRequestHeaders.Add("Authorization", authorizationKey);
-            client.DefaultRequestHeaders.Add("Accept", "application/json");
-            return client;
-        }
+        //private async Task<HttpClient> GetClient()
+        //{
+        //    HttpClient client = new HttpClient();
+        //    client.DefaultRequestHeaders.Add("Accept", "application/json");
+        //    return client;
+        //}
 
         protected override async void OnAppearing()
         {
-            HttpClient client = await GetClient();
+            HttpClient client = new HttpClient();
             string content = await client.GetStringAsync(Url);
-            List<Item> items = JsonConvert.DeserializeObject<List<Item>>(content);
-            _item = new ObservableCollection<Item>(items);
-            TestListView.ItemsSource = _item;
+            List<Club> clubs = JsonConvert.DeserializeObject<List<Club>>(content);
+            _club = new ObservableCollection<Club>(clubs);
+            TestListView.ItemsSource = _club;
             base.OnAppearing();
         }
 
         private async void OnAdd(object sender, EventArgs e)
         {
-            HttpClient client = await GetClient();
-            Item item = new Item { Title = $"New Title: Timestamp {DateTime.UtcNow.Ticks}" };
-            string content = JsonConvert.SerializeObject(item);
+            HttpClient client = new HttpClient();
+            Club club = new Club { clubName = $"New Title: Timestamp {DateTime.UtcNow.Ticks}" };
+            string content = JsonConvert.SerializeObject(club);
             await client.PostAsync(Url, new StringContent(content, Encoding.UTF8, "application/json"));
-            _item.Insert(0, item);
+            _club.Insert(0, club);
         }
 
         private async void OnUpdate(object sender, EventArgs e)
         {
-            HttpClient client = await GetClient();
-            Item item = _item[0];
-            item.Title += " [updated]";
-            string content = JsonConvert.SerializeObject(item);
-            await client.PutAsync(Url + "/" + item.Id, new StringContent(content, Encoding.UTF8, "application/json"));
+            HttpClient client = new HttpClient();
+            Club club = _club[0];
+            club.clubName += " [updated]";
+            string content = JsonConvert.SerializeObject(club);
+            await client.PutAsync(Url + "/" + club.clubId, new StringContent(content, Encoding.UTF8, "application/json"));
         }
 
         private async void OnDelete(object sender, EventArgs e)
         {
-            HttpClient client = await GetClient();
-            Item item = _item[0];
-            await client.DeleteAsync(Url + "/" + item.Id);
-            _item.Remove(item);
+            HttpClient client = new HttpClient();
+            Club club = _club[0];
+            await client.DeleteAsync(Url + "/" + club.clubId);
+            _club.Remove(club);
         }
-
     }
 }
