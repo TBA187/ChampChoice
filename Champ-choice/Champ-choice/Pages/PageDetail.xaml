@@ -1,38 +1,24 @@
-﻿<!--<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Champ_choice.Pages.PageDetail">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Press on a player below to vote!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
 
-            <ListView x:Name="TestListView">
+            <ListView x:Name="PlayerListView" HasUnevenRows="True" ItemSelected="OnSelection">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout VerticalOptions="Center">
-                                <Label Text="{Binding selectedItem}"/>
+                                <Label Text="{Binding playerName}"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>-->
-
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 x:Class="Champ_choice.Pages.PageDetail">
-    <ContentPage.Content>
-        <StackLayout VerticalOptions="Center">
-            <Label Text="Name:" FontSize="Medium" HorizontalOptions="FillAndExpand" />
-            <!--<Label Text="{Binding clubName}" FontSize="Medium" FontAttributes="Bold" />
-            <Label Text="{Binding clubLogo}" FontSize="Medium" FontAttributes="Bold" />-->
-            <Label x:Name="hey" FontSize="Medium" FontAttributes="Bold" />
-            <Button Text="Vote"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
