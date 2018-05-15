@@ -13,7 +13,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout VerticalOptions="Center">
-                                <Label Text="{Binding playerName}"/>
+                                <Label Text="{Binding playerName}" FontSize="16" Margin="20, 20, 0, 20" TextColor="DarkBlue"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

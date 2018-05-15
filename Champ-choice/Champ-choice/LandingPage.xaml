@@ -53,7 +53,7 @@
                                     <ViewCell>
                                         <!--<Image Source="{Binding ImageResource.clubLogo}" WidthRequest="10" HeightRequest="10" Aspect="AspectFit" />-->
                                         <StackLayout VerticalOptions="Center">
-                                            <Label x:Name="hej" Text="{Binding clubName}" />
+                                            <Label x:Name="hej" Text="{Binding clubName}" FontSize="16" Margin="20, 20, 0, 20" TextColor="DarkBlue"/>
                                         </StackLayout>
                                     </ViewCell>
                                 </DataTemplate>

@@ -3,11 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Champ_choice.Pages.PlayerDetail">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Thanks for voting on: "/>
-            <Label Text="{Binding playerName}"/>
-            <Label Text="With player number: "/>
-            <Label Text="{Binding playerNr}"/>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label Text="Thanks for voting on: " FontSize="16" TextColor="DarkBlue" />
+            <Label Text="{Binding playerName}" FontSize="16" TextColor="DarkBlue" />
+            <Label Text="With player number: " FontSize="16" TextColor="DarkBlue" />
+            <Label Text="{Binding playerNr}" FontSize="16" TextColor="DarkBlue" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
