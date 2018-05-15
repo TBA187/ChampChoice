@@ -14,10 +14,9 @@ namespace Champ_choice
 {
     public partial class LandingPage : ContentPage
     {
-        //private const string Url = "http://xam150.azurewebsites.net/api/books/";
-        //private const string Url = "http://localhost:1943/api/ClubApi/";
         private const string Url = "http://www.alphajob.org/api/ClubApi/";
         private ObservableCollection<Club> _club;
+        //private NavigationPage MainPage;
         //private string authorizationKey;
 
         public LandingPage()
@@ -27,15 +26,18 @@ namespace Champ_choice
             btnFavourites.Clicked += (s, e) => Navigation.PushModalAsync(new FavouritePage());
             btnChampChoice.Clicked += (s, e) => Navigation.PushModalAsync(new ChampChoicePage());
             btnSettings.Clicked += (s, e) => Navigation.PushModalAsync(new SettingsPage());
-
-            NavigationPage.SetHasNavigationBar(this, false);
         }
-        //private async Task<HttpClient> GetClient()
-        //{
-        //    HttpClient client = new HttpClient();
-        //    client.DefaultRequestHeaders.Add("Accept", "application/json");
-        //    return client;
-        //}
+
+        public async void OnSelection(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (TestListView.SelectedItem != null)
+            {
+                var pageDetail = new PageDetail();
+                pageDetail.BindingContext = e.SelectedItem as Club;
+                TestListView.SelectedItem = null;
+                await Navigation.PushModalAsync(pageDetail);
+            }
+        }
 
         protected override async void OnAppearing()
         {

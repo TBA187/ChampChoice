@@ -47,13 +47,13 @@
 
                     <StackLayout Spacing="10" HeightRequest="30">
 
-                        <ListView x:Name="TestListView">
+                        <ListView x:Name="TestListView" HasUnevenRows="True" ItemSelected="OnSelection">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
-                                        <Image Source="{Binding ImageResource.clubLogo}" WidthRequest="10" HeightRequest="10" Aspect="AspectFit" />
+                                        <!--<Image Source="{Binding ImageResource.clubLogo}" WidthRequest="10" HeightRequest="10" Aspect="AspectFit" />-->
                                         <StackLayout VerticalOptions="Center">
-                                            <Label Text="{Binding clubName}" FontSize="16" Margin="10,0,0,0" TextColor="Black" />
+                                            <Label x:Name="hej" Text="{Binding clubName}" />
                                         </StackLayout>
                                     </ViewCell>
                                 </DataTemplate>
