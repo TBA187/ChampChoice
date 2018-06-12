@@ -49,29 +49,29 @@ namespace Champ_choice
             base.OnAppearing();
         }
 
-        private async void OnAdd(object sender, EventArgs e)
+        private async void OnAdd(object sender, EventArgs e, string cName)
         {
             HttpClient client = new HttpClient();
-            Club club = new Club { clubName = $"New Title: Timestamp {DateTime.UtcNow.Ticks}" };
+            Club club = new Club { clubName = cName };
             string content = JsonConvert.SerializeObject(club);
             await client.PostAsync(Url, new StringContent(content, Encoding.UTF8, "application/json"));
-            _club.Insert(0, club);
+            _club.Add(club);
         }
 
-        private async void OnUpdate(object sender, EventArgs e)
+        private async void OnUpdate(object sender, EventArgs e, int cId, string cName)
         {
             HttpClient client = new HttpClient();
-            Club club = _club[0];
-            club.clubName += " [updated]";
+            Club club = _club[cId];
+            club.clubName += cName;
             string content = JsonConvert.SerializeObject(club);
-            await client.PutAsync(Url + "/" + club.clubId, new StringContent(content, Encoding.UTF8, "application/json"));
+            await client.PutAsync(Url + "/" + cId, new StringContent(content, Encoding.UTF8, "application/json"));
         }
 
-        private async void OnDelete(object sender, EventArgs e)
+        private async void OnDelete(object sender, EventArgs e, int cId)
         {
             HttpClient client = new HttpClient();
-            Club club = _club[0];
-            await client.DeleteAsync(Url + "/" + club.clubId);
+            Club club = _club[cId];
+            await client.DeleteAsync(Url + "/" + cId);
             _club.Remove(club);
         }
     }
