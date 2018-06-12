@@ -33,7 +33,7 @@ namespace Champ_choice
             if (TestListView.SelectedItem != null)
             {
                 var pageDetail = new PageDetail();
-                pageDetail.BindingContext = e.SelectedItem as Club;
+                pageDetail.BindingContext = e.SelectedItem as Club; //Bind selected item to pageDetail as a club object
                 TestListView.SelectedItem = null;
                 await Navigation.PushModalAsync(pageDetail);
             }
@@ -41,7 +41,7 @@ namespace Champ_choice
 
         protected override async void OnAppearing()
         {
-            HttpClient client = new HttpClient();
+            HttpClient client = new HttpClient(); // Initialize new object
             string content = await client.GetStringAsync(Url);
             List<Club> clubs = JsonConvert.DeserializeObject<List<Club>>(content);
             _club = new ObservableCollection<Club>(clubs);
